@@ -1,0 +1,12 @@
+# Make build
+lag
+ball
+*.o
+
+# nob build
+build/
+nob
+nob.old
+
+# etags
+TAGS
