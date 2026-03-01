@@ -92,6 +92,9 @@ NADEF float vecf_dot(VecF *a, VecF *b);
 NADEF MatI mati_dot(MatI *A, MatI *B);
 NADEF MatF matf_dot(MatF *A, MatF *B);
 
+NADEF MatI mati_gauss_elim(MatI *A);
+NADEF MatF matf_gauss_elim(MatF *A);
+
 #endif // NA_H_
 
 #ifdef NA_IMPLEMENTATION
