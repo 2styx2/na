@@ -99,12 +99,22 @@ NADEF MatF matf_dot(MatF *A, MatF *B);
 NADEF int veci_dot(VecI *a, VecI *b) {
     NA_ASSERT(a != NULL && b != NULL && "Vectors cannot be NULL");
     NA_ASSERT(a->rows == b->rows && "Dot product failed: Vector sizes do not match");
-    int sum = 0;
-    for (size_t i = 0; i < a->rows; i++ {
+    int prod = 0;
+    for (size_t i = 0; i < a->rows; i++) {
         prod += a->data[i] * b->data[i];
     }
     return prod;
 }
+NADEF float vecf_dot(VecF *a, VecF *b) {
+    NA_ASSERT(a != NULL && b != NULL && "Vectors cannot be NULL");
+    NA_ASSERT(a->rows == b->rows && "Dot product failed: Vector sizes do not match");
+    float prod = 0;
+    for (size_t i = 0; i < a->rows; i++) {
+        prod += a->data[i] * b->data[i];
+    }
+    return prod;
+}
+
 #endif // NA_IMPLEMENTATION
 
 #ifndef NA_STRIP_PREFIX_GUARD_
