@@ -92,8 +92,11 @@ NADEF float vecf_dot(VecF *a, VecF *b);
 NADEF MatI mati_dot(MatI *A, MatI *B);
 NADEF MatF matf_dot(MatF *A, MatF *B);
 
-NADEF MatI mati_gauss_elim(MatI *A);
-NADEF MatF matf_gauss_elim(MatF *A);
+NADEF void mati_gauss_elim(MatI *A);
+NADEF void matf_gauss_elim(MatF *A);
+
+// Return BOTH L and U
+NADEF *MatI mati_lu_decomp(MatI *A);
 
 #endif // NA_H_
 
