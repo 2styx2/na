@@ -96,7 +96,7 @@ NADEF void mati_gauss_elim(MatI *A);
 NADEF void matf_gauss_elim(MatF *A);
 
 // Return BOTH L and U
-NADEF *MatI mati_lu_decomp(MatI *A);
+NADEF MatI *mati_lu_decomp(MatI *A);
 
 #endif // NA_H_
 
